@@ -8,13 +8,13 @@ Use this ansible script to install software, create users, and update your Windo
 ansible-galaxy collection install chocolatey.chocolatey
 ```
 
-# Windows Chocolatey
+# Windows Chocolatey | Packages
 Find More Packages Here:
 ```
 https://community.chocolatey.org/packages
 ```
 
-# Enable WinRM on Remote Machine using this Action Script
+# Enable WinRM on the remote machine using this Action Script
 ```
 $url = "https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1"
 $file = "$env:temp\ConfigureRemotingForAnsible.ps1"

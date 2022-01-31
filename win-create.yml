@@ -1,0 +1,43 @@
+---
+- hosts: windows
+  gather_facts: yes
+  tasks:
+
+# Msg Dialog Box
+  - name: Warn Users of Update
+    win_msg:
+      display_seconds: 60
+      msg: Automated upgrade about to start. Please save your work and log off before 00:00 am/pm, Computers may reboot several times
+
+# Voice Warning
+  - name: Warn Users of Update w/ Voice
+    win_say:
+      msg: Automated upgrade about to start. Please save your work and log off before 00:00 am/pm, Computers may reboot several times
+
+# Create Admin User
+  - name: Create User Admin
+    win_user: 
+      name: Admin
+      password: P@$$W0rd!!
+      state: present
+      groups:
+        - Administrators
+
+# Install Required Software
+  - name: Install multiple packages
+    win_chocolatey:
+      name:
+      - chrome
+      - adobereader
+      - vlc
+      state: present
+      
+# Windows Updates w/ reboot
+  - name: Install all updates without a schedule tasks
+    win_updates:
+      server_selection: windows_update
+      category_names:
+        - SecurityUpdates
+        - CriticalUpdates
+        - UpdateRollups
+      reboot: yes

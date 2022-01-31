@@ -9,4 +9,7 @@ $file = "$env:temp\ConfigureRemotingForAnsible.ps1"
 powershell.exe -ExecutionPolicy ByPass -File $file
 winrm enumerate winrm/config/Listener
 ```
-
+# To run the script, use the following command:
+```
+sudo ansible-playbook win-create.yml -i hosts
+```

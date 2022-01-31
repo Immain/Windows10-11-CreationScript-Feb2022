@@ -4,7 +4,7 @@
 Use this ansible script to install software, create users, and update your Windows 10/11 System. 
 
 # Windows Chocolatey
-- Find More Scripts Here:
+Find More Scripts Here:
 ```
 https://community.chocolatey.org/packages
 ```

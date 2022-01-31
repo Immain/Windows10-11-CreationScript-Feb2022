@@ -3,6 +3,12 @@
 # Windows10-11-CreationScript-Feb2022
 Use this ansible script to install software, create users, and update your Windows 10/11 System. 
 
+# Windows Chocolatey
+- Find More Scripts Here:
+```
+https://community.chocolatey.org/packages
+```
+
 # Enable WinRM on Remote Machine using this Action Script
 ```
 $url = "https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1"
